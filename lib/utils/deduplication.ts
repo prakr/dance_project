@@ -33,7 +33,7 @@ export function areDuplicates(event1: RawEventItem, event2: RawEventItem): Simil
   // - Venue similarity > threshold (and both have venues)
   const isDuplicate =
     titleSimilarity > TITLE_SIMILARITY_THRESHOLD ||
-    (venueSimilarity > VENUE_SIMILARITY_THRESHOLD && event1.venueName && event2.venueName);
+    (venueSimilarity > VENUE_SIMILARITY_THRESHOLD && !!event1.venueName && !!event2.venueName);
 
   return { titleSimilarity, venueSimilarity, isDuplicate };
 }
