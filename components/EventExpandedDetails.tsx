@@ -18,7 +18,7 @@ export default function EventExpandedDetails({ event }: EventExpandedDetailsProp
   };
 
   return (
-    <div className="mt-4 pt-4 border-t border-gray-200 space-y-4">
+    <div className="mt-3 md:mt-4 pt-3 md:pt-4 border-t border-gray-200 space-y-3 md:space-y-4">
       {/* Dance Types */}
       <div>
         <h4 className="text-sm font-semibold text-gray-700 mb-2">Dance Types</h4>

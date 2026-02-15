@@ -9,17 +9,26 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
+        // Bandsintown-inspired brand colors
+        brand: {
+          primary: '#00D1C1',
+          'primary-dark': '#00B8AA',
+          'primary-light': '#00E8D6',
+          dark: '#1A1A1A',
+          'dark-light': '#2C2C2C',
+        },
+        // Legacy colors (keeping for backward compatibility)
         primary: {
-          50: '#fdf2f8',
-          100: '#fce7f3',
-          200: '#fbcfe8',
-          300: '#f9a8d4',
-          400: '#f472b6',
-          500: '#ec4899',
-          600: '#db2777',
-          700: '#be185d',
-          800: '#9d174d',
-          900: '#831843',
+          50: '#e6fffc',
+          100: '#b3fff6',
+          200: '#80fff0',
+          300: '#4dffea',
+          400: '#1affe4',
+          500: '#00D1C1',
+          600: '#00B8AA',
+          700: '#009688',
+          800: '#007566',
+          900: '#005344',
         },
         secondary: {
           50: '#faf5ff',

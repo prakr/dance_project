@@ -34,7 +34,7 @@ export default function EventCard({ event, isExpanded, onToggleExpand }: EventCa
   return (
     <div className="bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow">
       <div
-        className="p-4 cursor-pointer"
+        className="p-3 md:p-4 cursor-pointer"
         onClick={onToggleExpand}
         role="button"
         tabIndex={0}
@@ -48,7 +48,7 @@ export default function EventCard({ event, isExpanded, onToggleExpand }: EventCa
         {/* Header Row */}
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1 min-w-0">
-            <h3 className="text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
+            <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2 line-clamp-2">
               {event.title}
             </h3>
 

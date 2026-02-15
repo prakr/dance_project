@@ -44,7 +44,7 @@ export default function SourceList({ sources, sourceUrl }: SourceListProps) {
           href={sourceUrl}
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-1 text-sm text-primary-600 hover:text-primary-700 underline"
+          className="inline-flex items-center gap-1 text-sm text-brand-primary hover:text-brand-primary-dark underline"
         >
           View original source
         </a>

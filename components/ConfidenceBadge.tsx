@@ -8,7 +8,7 @@ export default function ConfidenceBadge({ score }: ConfidenceBadgeProps) {
   let label = '';
 
   if (score >= 70) {
-    colorClasses = 'bg-green-100 text-green-800 border-green-300';
+    colorClasses = 'bg-brand-primary/10 text-brand-primary border-brand-primary/30';
     label = 'High Confidence';
   } else if (score >= 50) {
     colorClasses = 'bg-yellow-100 text-yellow-800 border-yellow-300';

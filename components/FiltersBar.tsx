@@ -11,10 +11,10 @@ interface FiltersBarProps {
 
 export default function FiltersBar({ filters, onFilterChange }: FiltersBarProps) {
   return (
-    <div className="bg-white rounded-lg shadow-md border border-gray-200 p-4">
-      <div className="flex items-center gap-2 mb-4">
-        <Filter className="w-5 h-5 text-gray-600" />
-        <h2 className="text-lg font-semibold text-gray-900">Filters</h2>
+    <div className="bg-white rounded-lg shadow-md border border-gray-200 p-3 md:p-4">
+      <div className="flex items-center gap-2 mb-3 md:mb-4">
+        <Filter className="w-4 h-4 md:w-5 md:h-5 text-gray-600" />
+        <h2 className="text-base md:text-lg font-semibold text-gray-900">Filters</h2>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -29,7 +29,7 @@ export default function FiltersBar({ filters, onFilterChange }: FiltersBarProps)
             onChange={(e) =>
               onFilterChange({ ...filters, city: e.target.value as City | 'all' })
             }
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-base transition-all"
           >
             <option value="all">All Cities</option>
             {CITIES.map((city) => (
@@ -51,7 +51,7 @@ export default function FiltersBar({ filters, onFilterChange }: FiltersBarProps)
             onChange={(e) =>
               onFilterChange({ ...filters, danceType: e.target.value as DanceType | 'all' })
             }
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-base transition-all"
           >
             <option value="all">All Dances</option>
             {DANCE_TYPES.map((type) => (
@@ -73,7 +73,7 @@ export default function FiltersBar({ filters, onFilterChange }: FiltersBarProps)
             onChange={(e) =>
               onFilterChange({ ...filters, category: e.target.value as EventCategory | 'all' })
             }
-            className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+            className="w-full px-3 py-2 md:py-2.5 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand-primary focus:border-brand-primary text-base transition-all"
           >
             <option value="all">All Categories</option>
             {EVENT_CATEGORIES.map((category) => (
@@ -85,7 +85,7 @@ export default function FiltersBar({ filters, onFilterChange }: FiltersBarProps)
         </div>
 
         {/* Show Low Confidence Toggle */}
-        <div className="flex items-end">
+        <div className="flex items-end md:items-center">
           <label className="flex items-center cursor-pointer">
             <input
               type="checkbox"
@@ -93,7 +93,7 @@ export default function FiltersBar({ filters, onFilterChange }: FiltersBarProps)
               onChange={(e) =>
                 onFilterChange({ ...filters, showLowConfidence: e.target.checked })
               }
-              className="w-4 h-4 text-primary-600 border-gray-300 rounded focus:ring-primary-500"
+              className="w-4 h-4 text-brand-primary border-gray-300 rounded focus:ring-brand-primary flex-shrink-0"
             />
             <span className="ml-2 text-sm text-gray-700">Show low-confidence events</span>
           </label>
